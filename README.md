@@ -12,7 +12,7 @@ Step 4: Tune the output settings to your needs. <br><br>
 Step 5: Run the program, by default the .csv will be placed in the bin/debug folder. You can change this in the same place you set your image. <br><br>
 Step 6: You're done! <br>
 
-The output looks like this:
+The output .csv file looks like this:
 
 ![image](https://user-images.githubusercontent.com/47984645/145701222-501ae356-0941-4c1f-bb8a-9c3f16ad360a.png)
 
