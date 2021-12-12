@@ -16,6 +16,6 @@ The output .csv file looks like this:
 
 ![image](https://user-images.githubusercontent.com/47984645/145701222-501ae356-0941-4c1f-bb8a-9c3f16ad360a.png)
 
-Feel free to use this program and make changes on your own branches as you see fit. The program may be updated to handle more than just binary images in future.
+Feel free to use this program and make changes on your own branches as you see fit. The program will continue to be developed with new features added.
 
 
