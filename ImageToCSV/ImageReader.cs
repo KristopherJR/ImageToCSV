@@ -1,11 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Numerics;
 
 /// <summary>
 /// Author: Kristopher Randle
-/// Version: 0.1, 12-12-21
+/// Version: 0.2, 12-12-21
 /// </summary>
 namespace ImageToCSV
 {
@@ -16,13 +17,17 @@ namespace ImageToCSV
         private Bitmap _image;
         private string[,] _csv;
         private StreamWriter _streamWriter;
+        private byte[] _whitePixel;
+        private byte[] _blackPixel;
         #endregion
 
         public ImageReader()
         {
             _outputPath = Directory.GetCurrentDirectory() + "/ImageToCSV.csv";
-            _image = new Bitmap("test2.png");
+            _image = new Bitmap("test.png");
             _csv = new string[_image.Width, _image.Height];
+            _whitePixel = new byte[] { 255, 255, 255 };
+            _blackPixel = new byte[] { 0, 0, 0 };
 
             ParseImage();
             OutputTxt();
@@ -36,13 +41,13 @@ namespace ImageToCSV
                 for (int j = 0; j < _image.Height; j++)
                 {
                     Color pixel = _image.GetPixel(i, j);
-                    Vector3 rgb = new Vector3(pixel.R, pixel.G, pixel.B);
+                    byte[] rgb = new byte[] { pixel.R, pixel.G, pixel.B };
 
-                    if (rgb == new Vector3(255, 255, 255)) // if WHITE pixel
+                    if (rgb.SequenceEqual(_whitePixel))
                     {
                         _csv[i, j] = "0,";
                     }
-                    if (rgb == new Vector3(0, 0, 0)) // if BLACK pixel
+                    if (rgb.SequenceEqual(_blackPixel))
                     {
                         _csv[i, j] = "1,";
                     }
@@ -75,6 +80,17 @@ namespace ImageToCSV
                 }
                 Debug.WriteLine("");
             }
+        }
+
+        /// <summary>
+        /// Prints the RGB value of a pixel represented as a byte array.
+        /// </summary>
+        /// <param name="pPixel">The byte array representing the RGB pixels to be printed to the console.</param>
+        private void PrintPixelValues(byte[] pPixel)
+        {
+            Debug.WriteLine("R: " + pPixel[0] +
+                           " G: " + pPixel[1] +
+                           " B: " + pPixel[2]);
         }
     }
 }
