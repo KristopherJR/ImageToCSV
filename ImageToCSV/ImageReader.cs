@@ -47,15 +47,15 @@ namespace ImageToCSV
 
                     if (rgb.SequenceEqual(_whitePixel))
                     {
-                        _csv[i, j] = "0,";
+                        _csv[i, j] = "-1,";
                     }
                     if (rgb.SequenceEqual(_blackPixel))
                     {
-                        _csv[i, j] = "1,";
+                        _csv[i, j] = "20,";
                     }
                     if (rgb.SequenceEqual(_customPixel))
                     {
-                        _csv[i, j] = "2,";
+                        _csv[i, j] = "30,";
                     }
                 }
             }
