@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToCSV", "ImageToCSV\ImageToCSV.csproj", "{72EF1BB1-8ABC-4C04-9C1F-CF3C26AD1596}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72EF1BB1-8ABC-4C04-9C1F-CF3C26AD1596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EF1BB1-8ABC-4C04-9C1F-CF3C26AD1596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EF1BB1-8ABC-4C04-9C1F-CF3C26AD1596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EF1BB1-8ABC-4C04-9C1F-CF3C26AD1596}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9161EDB4-9DC5-465C-9418-C868EEE7C76F}
+	EndGlobalSection
+EndGlobal

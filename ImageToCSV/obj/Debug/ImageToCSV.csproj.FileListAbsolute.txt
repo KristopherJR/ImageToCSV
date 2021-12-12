@@ -1,0 +1,7 @@
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.exe.config
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.exe
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.pdb
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csproj.AssemblyReference.cache
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csproj.CoreCompileInputs.cache
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.exe
+C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.pdb
