@@ -24,7 +24,7 @@ namespace ImageToCSV
         public ImageReader()
         {
             _outputPath = Directory.GetCurrentDirectory() + "/ImageToCSV.csv";
-            _image = new Bitmap("test.png");
+            _image = new Bitmap("test2.png");
             _csv = new string[_image.Width, _image.Height];
             _whitePixel = new byte[] { 255, 255, 255 };
             _blackPixel = new byte[] { 0, 0, 0 };
