@@ -1,5 +1,5 @@
 # ImageToCSV
-A basic program that reads a binary image and outputs a corresponding .csv file. This was developed for the creation of TileMaps for Nosocomephobia (COMP3451 - Advanced Game Design Project).
+A basic program that reads an image and outputs a corresponding .csv file based on the RGB pixel values. This was developed for the creation of TileMaps for Nosocomephobia (COMP3451 - Advanced Game Design Project).
 
 <h1>How to Use</h1>
 Step 1: Convert your colour image to a binary (black & white) image, here is a 3x3 pixel example of a binary image with a black pixel in the centre:
