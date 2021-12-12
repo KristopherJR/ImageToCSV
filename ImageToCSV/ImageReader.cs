@@ -2,11 +2,10 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Numerics;
 
 /// <summary>
 /// Author: Kristopher Randle
-/// Version: 0.3.3, 12-12-21
+/// Version: 0.4, 12-12-21
 /// </summary>
 namespace ImageToCSV
 {
@@ -20,16 +19,24 @@ namespace ImageToCSV
         private byte[] _whitePixel;
         private byte[] _blackPixel;
         private byte[] _customPixel;
+        private string _whitePixelTextureId;
+        private string _blackPixelTextureId;
+        private string _customPixel1TextureId;
         #endregion
 
         public ImageReader()
         {
             _outputPath = Directory.GetCurrentDirectory() + "/ImageToCSV.csv";
-            _image = new Bitmap("1 to 3 - Walls - Floor Plan V2.png");
+            _image = new Bitmap("1 to 3 - Walls - Floor Plan.png");
             _csv = new string[_image.Width, _image.Height];
             _whitePixel = new byte[] { 255, 255, 255 };
             _blackPixel = new byte[] { 0, 0, 0 };
             _customPixel = new byte[] { 100, 255, 100 }; // green pixel
+
+            // Adjust these with the Ids of your desired textures from your tilesheets:
+            _whitePixelTextureId = "-1";
+            _blackPixelTextureId = "20";
+            _customPixel1TextureId = "30";
 
             ParseImage();
             OutputTxt();
@@ -49,30 +56,30 @@ namespace ImageToCSV
                     {
                         if (rgb.SequenceEqual(_whitePixel))
                         {
-                            _csv[x,y] = "-1";
+                            _csv[x,y] = _whitePixelTextureId;
                         }
                         if (rgb.SequenceEqual(_blackPixel))
                         {
-                            _csv[x,y] = "20";
+                            _csv[x,y] = _blackPixelTextureId;
                         }
                         if (rgb.SequenceEqual(_customPixel))
                         {
-                            _csv[x,y] = "30";
+                            _csv[x,y] = _customPixel1TextureId;
                         }
                     }
                     else
                     {
                         if (rgb.SequenceEqual(_whitePixel))
                         {
-                            _csv[x,y] = "-1,";
+                            _csv[x,y] = _whitePixelTextureId + ",";
                         }
                         if (rgb.SequenceEqual(_blackPixel))
                         {
-                            _csv[x,y] = "20,";
+                            _csv[x,y] = _blackPixelTextureId + ",";
                         }
                         if (rgb.SequenceEqual(_customPixel))
                         {
-                            _csv[x,y] = "30,";
+                            _csv[x,y] = _customPixel1TextureId + ",";
                         }
                     }  
                 }
