@@ -6,7 +6,7 @@ using System.Numerics;
 
 /// <summary>
 /// Author: Kristopher Randle
-/// Version: 0.2, 12-12-21
+/// Version: 0.2.1, 12-12-21
 /// </summary>
 namespace ImageToCSV
 {
@@ -24,7 +24,7 @@ namespace ImageToCSV
         public ImageReader()
         {
             _outputPath = Directory.GetCurrentDirectory() + "/ImageToCSV.csv";
-            _image = new Bitmap("test2.png");
+            _image = new Bitmap("b1.png");
             _csv = new string[_image.Width, _image.Height];
             _whitePixel = new byte[] { 255, 255, 255 };
             _blackPixel = new byte[] { 0, 0, 0 };
@@ -59,11 +59,11 @@ namespace ImageToCSV
         {
             using (_streamWriter = new StreamWriter(_outputPath))
             {
-                for (int i = 0; i < _csv.GetLength(0); i++) // rows/image width
+                for (int i = 0; i < _csv.GetLength(1); i++) // rows/image width
                 {
-                    for (int j = 0; j < _csv.GetLength(1); j++) // columns/image height
+                    for (int j = 0; j < _csv.GetLength(0); j++) // columns/image height
                     {
-                        _streamWriter.Write(_csv[i, j]);
+                        _streamWriter.Write(_csv[j, i]);
                     }
                     _streamWriter.WriteLine(""); // new line
                 }
