@@ -6,7 +6,7 @@ using System.Numerics;
 
 /// <summary>
 /// Author: Kristopher Randle
-/// Version: 0.3, 12-12-21
+/// Version: 0.3.1, 12-12-21
 /// </summary>
 namespace ImageToCSV
 {
@@ -25,7 +25,7 @@ namespace ImageToCSV
         public ImageReader()
         {
             _outputPath = Directory.GetCurrentDirectory() + "/ImageToCSV.csv";
-            _image = new Bitmap("1 to 3 - Floor Plan V2.png");
+            _image = new Bitmap("1 to 3 - Floor - Floor Plan V1.png");
             _csv = new string[_image.Width, _image.Height];
             _whitePixel = new byte[] { 255, 255, 255 };
             _blackPixel = new byte[] { 0, 0, 0 };
@@ -45,18 +45,36 @@ namespace ImageToCSV
                     Color pixel = _image.GetPixel(i, j);
                     byte[] rgb = new byte[] { pixel.R, pixel.G, pixel.B };
 
-                    if (rgb.SequenceEqual(_whitePixel))
+                    if(j == _image.Height - 1)
                     {
-                        _csv[i, j] = "-1,";
+                        if (rgb.SequenceEqual(_whitePixel))
+                        {
+                            _csv[i, j] = "-1";
+                        }
+                        if (rgb.SequenceEqual(_blackPixel))
+                        {
+                            _csv[i, j] = "25";
+                        }
+                        if (rgb.SequenceEqual(_customPixel))
+                        {
+                            _csv[i, j] = "30";
+                        }
                     }
-                    if (rgb.SequenceEqual(_blackPixel))
+                    else
                     {
-                        _csv[i, j] = "20,";
-                    }
-                    if (rgb.SequenceEqual(_customPixel))
-                    {
-                        _csv[i, j] = "30,";
-                    }
+                        if (rgb.SequenceEqual(_whitePixel))
+                        {
+                            _csv[i, j] = "-1,";
+                        }
+                        if (rgb.SequenceEqual(_blackPixel))
+                        {
+                            _csv[i, j] = "25,";
+                        }
+                        if (rgb.SequenceEqual(_customPixel))
+                        {
+                            _csv[i, j] = "30,";
+                        }
+                    }  
                 }
             }
         }
