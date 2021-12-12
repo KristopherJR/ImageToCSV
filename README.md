@@ -2,7 +2,7 @@
 A basic program that reads an image and outputs a corresponding .csv file based on the RGB pixel values. This was developed for the creation of TileMaps for Nosocomephobia (COMP3451 - Advanced Game Design Project).
 
 <h1>How to Use</h1>
-Step 1: Prep your image, it can be binary (black & white) or black,white and one other colour. here is a 3x3 pixel example of a binary image with a black pixel in the centre:
+Step 1: Prep your image, it can be binary (black & white) or black, white and one other colour. here is a 3x3 pixel example of a binary image with a black pixel in the centre:
 
 ![image](https://user-images.githubusercontent.com/47984645/145701127-b069a905-b312-43f8-a226-b5c6ba34602d.png)
 
