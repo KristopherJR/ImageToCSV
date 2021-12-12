@@ -38,41 +38,41 @@ namespace ImageToCSV
 
         private void ParseImage()
         {
-            for (int i = 0; i < _image.Width; i++)
+            for (int x = 0; x < _image.Width; x++)
             {
-                for (int j = 0; j < _image.Height; j++)
+                for (int y = 0; y < _image.Height; y++)
                 {
-                    Color pixel = _image.GetPixel(i, j);
+                    Color pixel = _image.GetPixel(x, y);
                     byte[] rgb = new byte[] { pixel.R, pixel.G, pixel.B };
 
-                    if(i == _image.Width - 1)
+                    if(y == _image.Height - 1)
                     {
                         if (rgb.SequenceEqual(_whitePixel))
                         {
-                            _csv[i, j] = "-1";
+                            _csv[x, y] = "-1";
                         }
                         if (rgb.SequenceEqual(_blackPixel))
                         {
-                            _csv[i, j] = "20";
+                            _csv[x, y] = "20";
                         }
                         if (rgb.SequenceEqual(_customPixel))
                         {
-                            _csv[i, j] = "30";
+                            _csv[x, y] = "30";
                         }
                     }
                     else
                     {
                         if (rgb.SequenceEqual(_whitePixel))
                         {
-                            _csv[i, j] = "-1,";
+                            _csv[x, y] = "-1,";
                         }
                         if (rgb.SequenceEqual(_blackPixel))
                         {
-                            _csv[i, j] = "20,";
+                            _csv[x, y] = "20,";
                         }
                         if (rgb.SequenceEqual(_customPixel))
                         {
-                            _csv[i, j] = "30,";
+                            _csv[x, y] = "30,";
                         }
                     }  
                 }
@@ -83,11 +83,11 @@ namespace ImageToCSV
         {
             using (_streamWriter = new StreamWriter(_outputPath))
             {
-                for (int i = 0; i < _csv.GetLength(1); i++) // rows/image width
+                for (int x = 0; x < _csv.GetLength(0); x++) // rows/image width
                 {
-                    for (int j = 0; j < _csv.GetLength(0); j++) // columns/image height
+                    for (int y = 0; y < _csv.GetLength(1); y++) // columns/image height
                     {
-                        _streamWriter.Write(_csv[j, i]);
+                        _streamWriter.Write(_csv[x, y]);
                     }
                     _streamWriter.WriteLine(""); // new line
                 }
@@ -96,11 +96,11 @@ namespace ImageToCSV
 
         private void PrintCurrentCSV()
         {
-            for (int i = 0; i < _csv.GetLength(0); i++)
+            for (int x = 0; x < _csv.GetLength(0); x++)
             {
-                for (int j = 0; j < _csv.GetLength(1); j++)
+                for (int y = 0; y < _csv.GetLength(1); y++)
                 {
-                    Debug.Write(_csv[i, j]);
+                    Debug.Write(_csv[x, y]);
                 }
                 Debug.WriteLine("");
             }
