@@ -1,6 +1,10 @@
 # ImageToCSV
 A basic program that reads an image and outputs a corresponding .csv file based on the RGB pixel values. This was developed for the creation of TileMaps for Nosocomephobia (COMP3451 - Advanced Game Design Project).
 
+<p align="center" width="100%">
+    <img width="33%" src="https://user-images.githubusercontent.com/47984645/157144947-aaa57523-763a-4a77-b652-fd6f7b92aba7.png">
+</p>
+
 <h1>How to Use</h1>
 Step 1: Prep your image, it can be binary (black & white) or black, white and one other colour. here is a 3x3 pixel example of a binary image with a black pixel in the centre:
 
