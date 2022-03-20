@@ -5,3 +5,10 @@ C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csp
 C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csproj.CoreCompileInputs.cache
 C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.exe
 C:\Users\krist\Desktop\ImageToCSV\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.pdb
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.exe.config
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.exe
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\bin\Debug\ImageToCSV.pdb
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csproj.AssemblyReference.cache
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.csproj.CoreCompileInputs.cache
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.exe
+D:\Programming\Personal\C#\ImageToCSV\ImageToCSV\obj\Debug\ImageToCSV.pdb
